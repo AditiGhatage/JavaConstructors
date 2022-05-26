@@ -9,7 +9,7 @@ public class FacebookSignUp extends Utility
 	}	
 	public void closeBrowser()
 	{
-		System.out.println("Close the browser");
+		System.out.print("\nClose the browser");
 	}	
 	
 	/*public void showMobileNumber() {

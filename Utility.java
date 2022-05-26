@@ -8,11 +8,17 @@ public class Utility
 {
 	Random randomname = new Random();
 
-	public void showName() 
+	public String showFName() 
 	{
 		String strFName[] = {"Aditi","Raghav","Rohan","Rina","Sangita","Aishwarya","Santosh","Sangram","Shivani"};
+		System.out.println("First Name is :" +strFName[new Random().nextInt(strFName.length)]);
+		return null;
+	}	
+	public String showLName()
+	{
 		String strLName[] = {"Ghatage","Patil","Done","Jadhav","Desai","Sawant","Kulkarni","Deshpande","Deshmukh"};
-		System.out.println("Name :" +strFName[randomname.nextInt(strFName.length)]+ " " +strLName[randomname.nextInt(strLName.length)]);		
+		System.out.println("Last Name is :" +strLName[new Random().nextInt(strLName.length)]);
+		return null;		
 	}
 	
 	public String gender(String gender)

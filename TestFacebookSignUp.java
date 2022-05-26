@@ -6,13 +6,15 @@ public class TestFacebookSignUp {
 	{
 		FacebookSignUp objutility = new FacebookSignUp();
 		objutility.getURL("https://www.facebook.com/");	
-		objutility.showName();;
+		objutility.showFName();
+		objutility.showLName();		
 		//objutility.showMobileNumber();
 		objutility.showGender();
 		objutility.genderDisplay();
 		objutility.randomBirthday();
 		objutility.setPassword();
 		objutility.phoneNumber();
+		
 		objutility.closeBrowser();
 		//objutility.randomDate(null, null);
 		

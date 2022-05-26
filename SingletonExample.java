@@ -5,17 +5,13 @@ public class SingletonExample
 
 	private static SingletonExample objInstance = new SingletonExample();
 
-	SingletonExample() 
+	private SingletonExample() 
 	{ //Private Constructor
 
 	}
 
-	public SingletonExample getInstance() 
+	public static SingletonExample getInstance() 
 	{
-		if(objInstance == null) 
-		{
-			objInstance = new SingletonExample();
-		}
 		return objInstance;
 	}
 

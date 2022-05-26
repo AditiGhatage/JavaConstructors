@@ -5,10 +5,10 @@ public class TestSingletonExample
 
 	public static void main(String[] args) 
 	{
-			SingletonExample objSingletonExample = new SingletonExample();
+			SingletonExample objSingletonExample = SingletonExample.getInstance();
 
 			objSingletonExample.displayMsg();
-			objSingletonExample.getInstance();
+			//objSingletonExample.getInstance();
 	}
 
 }
