@@ -7,5 +7,11 @@ public class MethodOverridingExample
 	{
 		System.out.println("Amount deposited: " +intAmount);
 	}
+	public int BankInterest(int intInterest)
+	{
+		System.out.println("Bank Interest: " +intInterest);
+		return (intInterest);
+	}
+	
 
 }

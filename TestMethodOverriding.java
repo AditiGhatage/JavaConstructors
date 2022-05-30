@@ -6,6 +6,7 @@ public class TestMethodOverriding {
 	{
 		SBIOverride objoverride = new SBIOverride();
 		objoverride.BankDeposit(1000);
+		objoverride.BankInterest(2);
 	}
 
 }
