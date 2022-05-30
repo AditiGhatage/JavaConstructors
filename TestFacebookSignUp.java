@@ -13,11 +13,12 @@ public class TestFacebookSignUp {
 		objutility.genderDisplay();
 		objutility.randomBirthday();
 		objutility.setPassword();
-		objutility.phoneNumber();
-		
+		objutility.setRandomNumber();
+		objutility.getDateTime();
 		objutility.closeBrowser();
 		//objutility.randomDate(null, null);
-		
+		objutility.setCurrentDate();
+		objutility.DateTime();
 		
 		
 	}

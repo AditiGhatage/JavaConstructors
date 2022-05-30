@@ -9,7 +9,7 @@ public class FacebookSignUp extends Utility
 	}	
 	public void closeBrowser()
 	{
-		System.out.print("\nClose the browser");
+		System.out.println("Close the browser");
 	}	
 	
 	/*public void showMobileNumber() {
@@ -24,7 +24,18 @@ public class FacebookSignUp extends Utility
 	
 	public void randomBirthday()
 	{
-		System.out.println("Birthdate is: " +randomBday());
+		System.out.println("Birthdate is: " +randomBdate());
+	}
+	
+	public void setRandomNumber() {
+		
+		System.out.println("Random Number : "+getRandomMobile(8));
+	}
+	public void setCurrentDate()
+	{
+		System.out.println("Current Date and Time(mm/dd/yyyy): " +getCurrentDate());
+		System.out.println("Current Date and Time(dd/mm/yyyy): " +DateFormat());
+		
 	}
 	
 }

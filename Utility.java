@@ -1,7 +1,10 @@
 package com.java.FacebookAutomation;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 public class Utility
@@ -23,7 +26,7 @@ public class Utility
 	
 	public String gender(String gender)
 	{
-	if(Math.random() > 0.5) gender  = "MALE";
+	if(Math.random() > 1) gender  = "MALE";
 	else gender = "FEMALE";
 	return (gender);
 	}
@@ -35,7 +38,7 @@ public class Utility
 	}
 	
 	
-	public String showMobileNumber(String strMobileNumber) 
+	/*public String showMobileNumber(String strMobileNumber) 
 	{
 		Random rd=new Random();
 		int intMobileNo;
@@ -47,49 +50,70 @@ public class Utility
 			 str[intNum]=Integer.toString(intMobileNo);
 			}
 		return strMobileNumber = str[7]+str[1]+str[0]+str[3]+str[4]+str[5]+str[6]+str[7]+str[8]+str[9];
-	}
+	}*/
 	
 	public void setPassword() {
 		String strPassword = "AbcRt345";
 		System.out.println("Password is :" +strPassword);
 	}	
 	
-	public void phoneNumber()
-	{
-		Random generator = new Random();
-		int num0, num1, num2, num3, num4, num5, num6, num7, num8, num9;
-        /*num1 = generator.nextInt(6) + 2;
-        num2 = generator.nextInt(999) - 2 ; //must form an even number between 000-
-        num3 = generator.nextInt(6000); //must be between 0000-5999*/
-        num0 = 9;
-        num1 = 1;
-        num2 = generator.nextInt(5) + 5;
-        num3 = generator.nextInt(9) + 10;
-        num4 = generator.nextInt(10);
-        num5 = generator.nextInt(5) + 11;
-        num6 = generator.nextInt(10);
-        num7 = generator.nextInt(3);
-        num8 = generator.nextInt(5);
-        num9 = generator.nextInt(10);
-        System.out.print("Mobile Number: ");
-        System.out.print(num0);
-        System.out.print(num1);
-        System.out.print("-" + num2);
-        System.out.print(num3);
-        System.out.print(num4);
-        System.out.print(num5);
-        System.out.print(num6);
-        System.out.print(num7);
-        System.out.print(num8);
-        System.out.print(num9);
-        
-	}
 
-	    public LocalDate randomBday() 
-	    {
-	        return LocalDate.now().minus(Period.ofDays((new Random().nextInt(365 * 70))));
+    public LocalDate randomBdate() 
+    {
+        return LocalDate.now().minus(Period.ofDays((new Random().nextInt(365 * 70))));
+	}
+	    
+	    //Random Mobile number
+    public static String getRandomMobile(int intLength)
+    {
+    	String allowChars="0123456789";
+		String randomString="";
+
+		for(int intIndex=0; intIndex<intLength;intIndex++) {
+			
+			int intNum= (int) Math.floor(Math.random()*allowChars.length());
+			randomString+=allowChars.substring(intNum, intNum+1);
+		}
+		
+		String strStartDigit[] = {"99","98","97","96","95","94","93","92","91","90"};
+		
+		String strRandomDigit = strStartDigit[new Random().nextInt(strStartDigit.length)];
+		
+		return strRandomDigit+randomString;
+    }
+    
+	public String getDateTime()
+	{
+		String strDate = new SimpleDateFormat("E dd/mm/yyyy 'at' HH:mm:ss a zzz").format(Calendar.getInstance().getTime());
+		System.out.println("Date and time : "+strDate);
+		return strDate;
+	}
+	//mm/dd/yyyy format date
+	public String getCurrentDate()
+	{
+		Date objDate = new Date();
+		SimpleDateFormat objsimple = new SimpleDateFormat();
+		String strCurrentDate = objsimple.format(objDate);
+		//System.out.println("Date: "+strCurrentDate);
+		return strCurrentDate;
+	}
 	
-	    }
+	public String DateFormat()
+	{
+		Date objDateT = new Date();
+		SimpleDateFormat objsimpledate = new SimpleDateFormat("dd/MM/yyyy mm:HH:ss zzz");
+		String strCurrentDate = objsimpledate.format(objDateT);
+		//String strDate = objsimpledate.format(objDateT);
+		return strCurrentDate;
+	}
 	
-	     
+	public void DateTime()
+	{
+		Date objdate = new Date();
+		SimpleDateFormat objDateText = new SimpleDateFormat("yyyy/MM/dd zzz");
+		String strDate = objDateText.format(objdate);
+		System.out.println("Date in format (yyyy/MM/dd): " +strDate);
+	}
+	
+	
 }
