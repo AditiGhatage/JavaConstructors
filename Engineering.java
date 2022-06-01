@@ -5,7 +5,6 @@ public class Engineering
 {
 	String strDepartment = "Computer";
 	String strDept = "Chemical";
-
 }
 
 class Department extends Engineering
